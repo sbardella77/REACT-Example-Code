@@ -1,7 +1,10 @@
-
+const txtStyle ={
+  width:'30px',
+  textAlign:'center'
+}
 function ButtonInc(props) {
   return( 
-    <button onClick={props.onClickFunction}>
+    <button onClick={props.onClickFunction} style={txtStyle}>
       +
     </button>
 );
@@ -9,7 +12,7 @@ function ButtonInc(props) {
 
 function ButtonDec(props) {
   return( 
-    <button onClick={props.onClickFunction}>
+    <button onClick={props.onClickFunction} style={txtStyle}>
       -
     </button>
 );
@@ -19,7 +22,7 @@ function ButtonDec(props) {
 
 function Display(props){
 return(
-  <div>{props.message}</div>
+  <input type="text" value={props.message} style={txtStyle} ></input>
   )
 }
 
@@ -34,7 +37,7 @@ function App(){
   <div>
         <ButtonInc onClickFunction={increaseCounter}/>
         <Display message={counter}/>
-        <ButtonDec onClickFunction={decreaseCounter} />
+        <ButtonDec onClickFunction={decreaseCounter}/>
 
       
   </div>
