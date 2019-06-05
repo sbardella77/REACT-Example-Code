@@ -26,18 +26,26 @@ return(
 function App(){
     const [counter,setCounter ] = useState(0)
     const increaseCounter = () => setCounter(counter+1)
-    const decreaseCounter = () => setCounter(counter-1)
+    const decreaseCounter = () => {
+      if(counter > 0 ){
+      setCounter(counter-1)
+      }}
   return(
   <div>
         <ButtonInc onClickFunction={increaseCounter}/>
         <Display message={counter}/>
-        <ButtonDec onClickFunction={decreaseCounter}/>
+        <ButtonDec onClickFunction={decreaseCounter} />
 
       
   </div>
   );
 }
 
+
+ReactDOM.render(
+<App/>,
+  document.getElementById('mountNode'),
+);
 
 ReactDOM.render(
 <App/>,
