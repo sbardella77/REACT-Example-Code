@@ -46,8 +46,3 @@ ReactDOM.render(
 <App/>,
   document.getElementById('mountNode'),
 );
-
-ReactDOM.render(
-<App/>,
-  document.getElementById('mountNode'),
-);
